@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
 
+    <script> 
+    function changeHeader() {
+        let myheader = document.getElementById("hello"); 
+        myheader.innerHTML = "Header Changed!";
+        myheader.style.color = "red";
+    }
+    
+    function displayOutput() {
+        let name = document.getElementById("nameInput").value;
+        let secret_code = "1234";
+        if (name == secret_code) {
+            document.getElementById("output").innerHTML = "<h1>You have unlocked the secrets to the universe!</h1>";
+        } else {
+            document.getElementById("output").innerHTML = "Hello, " + name + "!";
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="output">What is your name?</div>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="displayOutput()">Submit</button>
+
+    <h2 id = "hello">Welcome to the Home Page</h2>
+    <p id="hold">This is the main content of the home page.</p>
+    <button onclick="changeHeader()">Change Header</button>
+    
+
+    <script>
+        let a = 5;
+        let b = 10;
+        let sum;
+        sum = a + b;
+        console.log("Sum of a and b is: " + sum);
+        document.getElementById("hold").innerHTML = "The sum of a and b is: " + sum;
+        console.log("Hello, world!");
+    </script>
+
+    
+
+    
+
+</body>
+</html>
